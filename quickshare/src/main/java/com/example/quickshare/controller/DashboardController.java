@@ -1,17 +1,14 @@
 package com.example.quickshare.controller;
+ 
 
-import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class DashboardController {
 
-    @GetMapping("/dashboard")
-    public String dashboard(HttpSession session) {
-        if (session.getAttribute("user") == null) {
-            return "redirect:/login";
-        }
-        return "dashboard";
+    @GetMapping("/")
+    public String home() {
+        return "login";  // or return "dashboard"; depending on your first page
     }
 }
