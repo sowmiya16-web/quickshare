@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Join Room</title></head>
+<body>
+    <h2>Join Room</h2>
+    <form method="post" th:action="@{/joinRoom}">
+        <input type="text" name="roomName" placeholder="Room Name" required><br>
+        <input type="password" name="roomPassword" placeholder="Password" required><br>
+        <button type="submit">Join</button>
+    </form>
+    <p th:text="${msg}" style="color:red;"></p>
+</body>
+</html>

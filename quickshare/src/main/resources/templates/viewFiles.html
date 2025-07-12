@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Files in Room</title>
+</head>
+<body>
+    <h2>Files in Room: <span th:text="${roomName}"></span></h2>
+
+    <ul>
+        <li th:each="file : ${files}">
+            <a th:href="@{'/uploads/' + ${roomName} + '/' + ${file}}" th:text="${file}"></a>
+        </li>
+    </ul>
+
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
+
